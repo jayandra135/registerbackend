@@ -1,10 +1,11 @@
-require("dotenv").config();
+import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import RegisterRouter from "./router/register.router";
 var app = express();
 const PORT = process.env.PORT || 8001;
+dotenv.config();
 app.use(express.json());
 var corsOptions = {
   origin: "*",
